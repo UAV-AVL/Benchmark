@@ -82,7 +82,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 ### ✈️: UAV Images
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="overview_supp.png" alt="screenshot" />
 </div>
 
 <!-- Reference Map -->
