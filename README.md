@@ -12,7 +12,7 @@ Maybe you can mention me or this repo in the acknowledgements too
   <h1>The First Large-scale Benchmark for UAV Visual Localization under Low-altitude Multi-view Observation Condition</h1>
   
   <p>
-    An awesome README template for your projects! 
+    This benchmark focuses on the UAV visual localization task under Low-altitude Multi-view observation condition using the 2.5D aerial or satellite reference maps. The visual localization is mainly achieved via a unified framework combining image retrieval, image matching, and PnP problem solving. 
   </p>
   
   
