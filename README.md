@@ -55,8 +55,8 @@ Maybe you can mention me or this repo in the acknowledgements too
 # :notebook_with_decorative_cover: Table of Contents
 
 - [About the Dataset](#star2-about-the-project)
-  * [Dataset Characteristc](#camera-screenshots)
-  * [Image Examples](#space_invader-tech-stack)
+  * [UAV Images Examples](#camera-screenshots)
+  * [Dataset Characteristc](#space_invader-tech-stack)
 - [Getting Started](#toolbox-getting-started)
   * [Prerequisites](#bangbang-prerequisites)
   * [Installation](#gear-installation)
@@ -74,12 +74,19 @@ Maybe you can mention me or this repo in the acknowledgements too
 
   
 
-<!-- About the Project -->
+<!-- About the Dataset -->
 ## :star2: About the Dataset
 
 
-<!-- Screenshots -->
-### :camera: Screenshots
+<!-- UAV Images Examples -->
+### ✈️: UAV Images
+
+<div align="center"> 
+  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+</div>
+
+<!-- Reference Map -->
+### 🗺️: Reference Maps
 
 <div align="center"> 
   <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
