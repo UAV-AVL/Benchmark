@@ -8,8 +8,8 @@ Maybe you can mention me or this repo in the acknowledgements too
 -->
 <div align="center">
 
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Exploring the best way for UAV visual localization under Low-altitude Multi-view Observation Conditions: a Benchmark</h1>
+  <img src="overview.png" alt="logo" width="400" height="auto" />
+  <h1>The First Large-scale Benchmark for UAV Visual Localization under Low-altitude Multi-view Observation Condition</h1>
   
   <p>
     An awesome README template for your projects! 
@@ -54,12 +54,9 @@ Maybe you can mention me or this repo in the acknowledgements too
 <!-- Table of Contents -->
 # :notebook_with_decorative_cover: Table of Contents
 
-- [About the Project](#star2-about-the-project)
-  * [Screenshots](#camera-screenshots)
-  * [Tech Stack](#space_invader-tech-stack)
-  * [Features](#dart-features)
-  * [Color Reference](#art-color-reference)
-  * [Environment Variables](#key-environment-variables)
+- [About the Dataset](#star2-about-the-project)
+  * [Dataset Characteristc](#camera-screenshots)
+  * [Image Examples](#space_invader-tech-stack)
 - [Getting Started](#toolbox-getting-started)
   * [Prerequisites](#bangbang-prerequisites)
   * [Installation](#gear-installation)
@@ -78,7 +75,7 @@ Maybe you can mention me or this repo in the acknowledgements too
   
 
 <!-- About the Project -->
-## :star2: About the Project
+## :star2: About the Dataset
 
 
 <!-- Screenshots -->
