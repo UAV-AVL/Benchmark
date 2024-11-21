@@ -56,7 +56,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 
 - [About the Dataset](#star2-about-the-project)
   * [UAV Images Examples](#camera-screenshots)
-  * [Dataset Characteristc](#space_invader-tech-stack)
+  * [Dataset Features](#space_invader-tech-stack)
 - [Getting Started](#toolbox-getting-started)
   * [Prerequisites](#bangbang-prerequisites)
   * [Installation](#gear-installation)
@@ -75,77 +75,32 @@ Maybe you can mention me or this repo in the acknowledgements too
   
 
 <!-- About the Dataset -->
-## :star2: About the Dataset
+## 📸: About the Dataset
 
 
 <!-- UAV Images Examples -->
 ### ✈️: UAV Images
 
 <div align="center"> 
-  <img src="overview_supp.png" alt="screenshot" />
+  <img src="overview_supp.png" alt="UAV Image Examples" />
 </div>
 
 <!-- Reference Map -->
 ### 🗺️: Reference Maps
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="reference_map1_new.png" alt="Reference Map Examples" />
 </div>
 
+<!-- Dataset Features -->
+### 🌟: Dataset Features
 
-<!-- TechStack -->
-### :space_invader: Tech Stack
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://nextjs.org/">Next.js</a></li>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-    <li><a href="https://go.dev/">Golang</a></li>
-    <li><a href="https://nestjs.com/">Nest.js</a></li>
-    <li><a href="https://socket.io/">SocketIO</a></li>
-    <li><a href="https://www.prisma.io/">Prisma</a></li>    
-    <li><a href="https://www.apollographql.com/">Apollo</a></li>
-    <li><a href="https://graphql.org/">GraphQL</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.mysql.com/">MySQL</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><a href="https://redis.io/">Redis</a></li>
-    <li><a href="https://neo4j.com/">Neo4j</a></li>
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>DevOps</summary>
-  <ul>
-    <li><a href="https://www.docker.com/">Docker</a></li>
-    <li><a href="https://www.jenkins.io/">Jenkins</a></li>
-    <li><a href="https://circleci.com/">CircleCLI</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-### :dart: Features
-
-- Feature 1
-- Feature 2
-- Feature 3
+- **Multi-altitude:** Our dataset contains low-altitude flight conditions from 30m to 300m.
+- **Multi-view:**  Our dataset covers common used pitch angle of UAV imaging from 20° to 90°.
+- **Multi-scene:** Our dataset includes various scenes, such as dense urban areas (e.g., cities, towns, country), typical landmark scenes (e.g., playground, museums, church), natural scenes (e.g., farmland and mountains), and mixed scenes (e.g., universities and  park).
+- **Multi-reference map:** Our dataset provides two types of 2.5D reference maps for different purposes. The aerial map with high spatial resolution can be used for high-precision localization but needs pre-aerial photogrammetry. The satellite map serves as an alternative when the aerial map is unavailable.
+- **Multi-drone type:** Mavic 2, Mavic 3, Mavic 3 Pro, Phantom 3, Phantom 4, Phantom 4 RTK, Mini 4 Pro
+- **Others:** multiple weather(☀️⛅☁️🌫️🌧️), seasons(🌻🍀🍂⛄), illuminations(🌇🌆)
 
 <!-- Color Reference -->
 ### :art: Color Reference
