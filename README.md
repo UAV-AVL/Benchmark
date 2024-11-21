@@ -53,8 +53,8 @@ Maybe you can mention me or this repo in the acknowledgements too
 
 <!-- Table of Contents -->
 # :notebook_with_decorative_cover: Table of Contents
-
-- [About the Dataset](#about-the-dataset)
+- [Todo List](#todo)
+- [The AnyVisLoc Dataset](#about-the-dataset)
   * [UAV Images Examples](#UAV-Images)
   * [Reference Map Examples](#Reference-Maps)
   * [Dataset Features](#Dataset-Features)
@@ -64,20 +64,17 @@ Maybe you can mention me or this repo in the acknowledgements too
   * [Running Tests](#test_tube-running-tests)
   * [Run Locally](#running-run-locally)
   * [Deployment](#triangular_flag_on_post-deployment)
-- [Usage](#eyes-usage)
-- [Roadmap](#compass-roadmap)
-- [Contributing](#wave-contributing)
-  * [Code of Conduct](#scroll-code-of-conduct)
-- [FAQ](#grey_question-faq)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
 
-  
+<!-- Roadmap -->
+<a name="todo"></a>
+## :compass: Todo List
 
-<!-- About the Dataset -->
+* [x] Release a demo of the best combined method (Baseline) to achieve UAV visual localization.
+* [ ] Release all the UAV visual localization approaches evaluated in the benchmark.  
+
+<!-- About the AnyVisLoc Dataset -->
 <a name="about-the-dataset"></a>
-## 📸: About the Dataset
+## 📸: The AnyVisLoc Dataset: First Large-scale Low-altitude Multi-view UAV AVL dataset
 
 
 <!-- UAV Images Examples -->
@@ -106,16 +103,6 @@ Maybe you can mention me or this repo in the acknowledgements too
 - **Multi-reference map:** Our dataset provides two types of 2.5D reference maps for different purposes. The aerial map with high spatial resolution can be used for high-precision localization but needs pre-aerial photogrammetry. The satellite map serves as an alternative when the aerial map is unavailable.
 - **Multi-drone type:** Mavic 2, Mavic 3, Mavic 3 Pro, Phantom 3, Phantom 4, Phantom 4 RTK, Mini 4 Pro
 - **Others:** multiple weather(☀️⛅☁️🌫️🌧️), seasons(🌻🍀🍂⛄), illuminations(🌇🌆)
-
-<!-- Color Reference -->
-### :art: Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
 
 
 <!-- Env Variables -->
@@ -210,11 +197,7 @@ function App() {
 }
 ```
 
-<!-- Roadmap -->
-## :compass: Roadmap
 
-* [x] Todo 1
-* [ ] Todo 2
 
 
 <!-- Contributing -->
