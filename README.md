@@ -7,8 +7,8 @@ Don't forget to give this project a star for additional support ;)
 Maybe you can mention me or this repo in the acknowledgements too
 -->
 <div align="center">
-
-  <img src="overview.png" alt="logo" width="400" height="auto" />
+  <video src="movie.mp4.mp4" controls="controls" width="500" height="300"></video>
+  <!--<img src="overview.png" alt="logo" width="400" height="auto" />-->
   <h1>The First Large-scale Benchmark for UAV Visual Localization under Low-altitude Multi-view Observation Condition</h1>
   
   <p>
