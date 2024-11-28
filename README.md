@@ -104,45 +104,27 @@ Maybe you can mention me or this repo in the acknowledgements too
 - **Others:** multiple weather(☀️⛅☁️🌫️🌧️), seasons(🌻🍀🍂⛄), illuminations(🌇🌆)
 
 
-<!-- Env Variables -->
-### :key: Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-<!-- Getting Started -->
-## 	:toolbox: Getting Started
-
-<!-- Prerequisites -->
-### :bangbang: Prerequisites
-
-This project uses Yarn as package manager
-
-```bash
- npm install --global yarn
-```
+<!-- Running the baseline demo -->
+## 	🏃: Running the baseline demo
 
 <!-- Installation -->
 ### :gear: Installation
-
-Install my-project with npm
+Clone the project
 
 ```bash
-  yarn install my-project
-  cd my-project
+  git clone https://github.com/Louis3797/awesome-readme-template.git
+```
+
+Install packages(tested on windows python 3.9)
+
+```bash
+  pip install -r requriements.txt
 ```
    
-<!-- Running Tests -->
-### :test_tube: Running Tests
+<!-- Download-->
+### ⬇️: Download the dataset and the model weights
 
-To run tests, run the following command
-
-```bash
-  yarn test test
-```
+We put our dataset and the model weights in [Baiduxxx](https://github.com/Mabel0403/CAMP)
 
 <!-- Run Locally -->
 ### :running: Run Locally
