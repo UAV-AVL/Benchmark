@@ -115,7 +115,7 @@ Clone the project
   git clone https://github.com/Louis3797/awesome-readme-template.git
 ```
 
-Install packages(tested on windows python 3.9)
+Install dependencies(tested on windows python 3.9)
 
 ```bash
   pip install -r requriements.txt
@@ -124,7 +124,7 @@ Install packages(tested on windows python 3.9)
 <!-- Download-->
 ### ⬇️: Download the dataset and the model weights
 
-We put our dataset and the model weights in [Baiduxxx](https://github.com/Mabel0403/CAMP)
+We put our dataset and the model weights on the [Baidu Netdisk](https://github.com/Mabel0403/CAMP)
 
 <!-- Run Locally -->
 ### :running: Run Locally
@@ -132,7 +132,7 @@ We put our dataset and the model weights in [Baiduxxx](https://github.com/Mabel0
 Clone the project
 
 ```bash
-  git clone https://github.com/Louis3797/awesome-readme-template.git
+  git clone https://github.com/UAV-AVL/Benchmark.git
 ```
 
 Go to the project directory
