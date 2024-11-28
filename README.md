@@ -81,7 +81,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 ### ✈️: UAV Images
 
 <div align="center"> 
-  <img src="overview_supp.png" alt="UAV Image Examples" />
+  <img src="assets/overview_supp.png" alt="UAV Image Examples" />
 </div>
 
 <!-- Reference Map -->
@@ -89,7 +89,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 ### 🗺️: Reference Maps
 
 <div align="center"> 
-  <img src="reference_map1_new.png" alt="Reference Map Examples" />
+  <img src="assets/reference_map1_new.png" alt="Reference Map Examples" />
 </div>
 
 <!-- Dataset Features -->
