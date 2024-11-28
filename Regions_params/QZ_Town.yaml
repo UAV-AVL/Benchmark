@@ -1,0 +1,33 @@
+QZ_Town_UAV_PATH:  ./Data/UAV_image/QZ_Town/
+QZ_Town_UTM_SYSTEM: 50N
+QZ_Town_SAMPLE_INTERVAL: 1
+QZ_Town_UAV_PLACES:
+  - QZ_SongCity
+  - Qingzhou_3_2
+  - QingZhou_2024
+
+QZ_Town_HIGH_REF_PATH: .\Data\Reference_map\QZ_Town\result_roi.tif
+QZ_Town_HIGH_DSM_PATH: .\Data\Reference_map\QZ_Town\dsm_roi.tif
+QZ_Town_HIGH_REF_initialX: 631556.341
+QZ_Town_HIGH_REF_initialY: 4061562.708
+QZ_Town_HIGH_REF_resolution: 0.0609957
+QZ_Town_HIGH_DSM_resolution: 0.937272
+QZ_Town_HIGH_REF_COORDINATE:
+  - 2143.3682
+  - 2301.1853
+QZ_Town_HIGH_DSM_COORDINATE:
+  - 140.1837
+  - 150.3175
+
+QZ_Town_LOW_REF_PATH: .\Data\Reference_map\QZ_Town\satellite_roi.tif
+QZ_Town_LOW_DSM_PATH: .\Data\Reference_map\QZ_Town\QZ_town_DSM30_reproject_resize_roi.tif
+QZ_Town_LOW_REF_initialX: 631556.196
+QZ_Town_LOW_REF_initialY: 4061567.017
+QZ_Town_LOW_REF_resolution: 0.26004821
+QZ_Town_LOW_DSM_resolution: 30
+QZ_Town_LOW_REF_COORDINATE:
+  - 408.4728
+  - 431.1906
+QZ_Town_LOW_DSM_COORDINATE:
+  - 3.8365
+  - 4.2391

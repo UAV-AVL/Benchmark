@@ -1,0 +1,45 @@
+---
+TEST_INTERVAL: 20
+REGIONS:
+  - QZ_Town
+
+DEVICE: cuda
+RETRIEVAL_METHODS:
+   - CAMP
+#  - Inliners
+#  - Sample4Geo
+#  - DenseUAV
+#  - NetVLAD
+#  - MCCG
+#  - DAC
+#  - FSRA
+#  - MIFT
+#  - RK-Net
+#  - LPN
+#  - MI
+#  - NCC
+MATCHING_METHODS:
+  - Roma
+#  - LOFTR_gim
+#  - SP_LG_gim
+#  - SP_SG
+#  - DeDoDe
+#  - ALIKE
+#  - keypt2subpx
+#  - Xfeat_star
+#  - DKM_gim
+#  - SIFT
+#  - ORB
+#  - omniglue
+PNP_METHODS:
+  - P3P
+
+USE_DEM: true
+
+RETRIEVAL_COVER: 50
+RETRIEVAL_TOPN: 5
+RETRIEVAL_IMG: /1_Retrieval.png
+RETRIEVAL_IMG_NUM: 5
+RETRIEVAL_FEATURE_NORM: true
+SHOW_RETRIEVAL_RESULT: False
+BATCH_SIZE: 128
