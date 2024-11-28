@@ -105,7 +105,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 
 
 <!-- Running the baseline demo -->
-## 	🏃: Running the baseline demo
+## 	🚩: The baseline demo
 
 <!-- Installation -->
 ### :gear: Installation
@@ -127,21 +127,19 @@ Install dependencies(tested on windows python 3.9)
 We put our dataset and the model weights on the [Baidu Netdisk](https://github.com/Mabel0403/CAMP)
 
 <!-- Run Locally -->
-### :running: Run Locally
+### :running: Run the demo
 
-Clone the project
-
+This baseline use the [CAMP](https://github.com/Mabel0403/CAMP) model for image-level retrieval and the [Roma](https://github.com/Parskatt/RoMa) model for pixel-level matching, just run
 ```bash
-  git clone https://github.com/UAV-AVL/Benchmark.git
+  python baseline.py
 ```
 
-Go to the project directory
+if you want to test your own dataset, please put your drone images in xxx
 
 ```bash
   cd my-project
 ```
-
-Install dependencies
+and put your reference maps in xxx, the dataset configuration files have to be modified too.
 
 ```bash
   yarn install
