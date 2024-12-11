@@ -57,10 +57,10 @@ Maybe you can mention me or this repo in the acknowledgements too
   * [UAV Images Examples](#UAV-Images)
   * [Reference Map Examples](#Reference-Maps)
   * [Dataset Features](#Dataset-Features)
-- [Getting Started](#toolbox-getting-started)
+- [The baseline demo](#baseline)
   * [Prerequisites](#bangbang-prerequisites)
-  * [Installation](#gear-installation)
-  * [Running Tests](#test_tube-running-tests)
+  * [Installation](#Installation)
+  * [Download the dataset and the model weights](#Download)
   * [Run Locally](#running-run-locally)
   * [Deployment](#triangular_flag_on_post-deployment)
 
@@ -105,9 +105,11 @@ Maybe you can mention me or this repo in the acknowledgements too
 
 
 <!-- Running the baseline demo -->
+<a name="baseline"></a>
 ## 	🚩: The baseline demo
 
 <!-- Installation -->
+<a name="Installation"></a>
 ### :gear: Installation
 Clone the project
 
@@ -122,13 +124,17 @@ Install dependencies(tested on windows python 3.9)
 ```
    
 <!-- Download-->
+<a name="Download"></a>
 ### ⬇️: Download the dataset and the model weights
-
-- Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) .
-Please download the dataset and replace the ```./Data``` folder in the script.
-
-- The model weights for image retrieval and matching are available at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa). We also put them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r).
-<br>Please download the weights and put them into the ``` ./Retrieval_Models/CAMP/weights/xxx.pth``` and ```./Matching_Models/RoMa/ckpt/xxx.pth```, respectively.
+1. **Dataset**
+  - Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) .
+  - Please download the dataset and replace the `./Data` folder in the script.
+1. **Model Weights**
+- The model weights for image retrieval and matching are available at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa).
+- We have also uploaded them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r).
+- Please download the weights and place them in the following directories:
+  + For CAMP: `./Retrieval_Models/CAMP/weights/xxx.pth`
+  + For RoMa: `./Matching_Models/RoMa/ckpt/xxx.pth`
 <!-- Run Locally -->
 ### :running: Run the demo
 
@@ -137,10 +143,20 @@ This baseline use the [CAMP](https://github.com/Mabel0403/CAMP) model for image-
   python baseline.py
 ```
 ### :rocket: Test your own dataset
-if you want to test your own dataset, please following these steps:
-1. put your drone images in .\Data\UAV_image\your_test_region (the default image format is JPG, if you use other image format, please change the image read function.
-2. put your reference maps in .\Data\Reference_map\your_test_region (the 2d reference map and the corresponding dsm map are required, the default image format is TIF).
-3. add new configuration data in .\Data\metadata\your_test_region.json 
+If you want to test your own dataset, please follow these steps:
+
+1. **Prepare Drone Images**:
+   - Place your drone images in the directory `.\Data\UAV_image\your_test_region`.
+   - The default image format is JPG. If you are using other format (e.g., PNG), make sure to adjust the image reading function accordingly.
+
+2. **Prepare Reference Maps**:
+   - Put your reference maps in the directory `.\Data\Reference_map\your_test_region`.
+   - Both the 2D reference map and the corresponding DSM (Digital Surface Model) map are required.
+   - The default image format is TIF. If you use a different format, please convert it appropriately.
+
+3. **Configure Metadata**:
+   - Put your drone metadata in `.\Data\metadata\your_test_region.json`.
+   - Ensure that this JSON file includes all necessary metadata information, including the image path, drone 6 DoF pose(ground truth) and camera intrinsics.
 
 ```bash
   cd my-project
