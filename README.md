@@ -7,7 +7,7 @@ Don't forget to give this project a star for additional support ;)
 Maybe you can mention me or this repo in the acknowledgements too
 -->
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/433d9e54-46d8-42f2-9630-bf3e0c002239" controls="controls" width="500" height="300"></video>
+  <video src="https://github.com/user-attachments/assets/396b94f9-3f8c-43fe-a358-17a73b812e14" controls="controls" width="500" height="300"></video>
   <!--<img src="overview.png" alt="logo" width="400" height="auto" />-->
   <h1>The First Large-scale Benchmark for UAV Visual Localization under Low-altitude Multi-view Observation Condition</h1>
   
