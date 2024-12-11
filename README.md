@@ -124,7 +124,10 @@ Install dependencies(tested on windows python 3.9)
 <!-- Download-->
 ### ⬇️: Download the dataset and the model weights
 
-We put our dataset and the model weights on the [Baidu Netdisk](https://github.com/Mabel0403/CAMP)
+We put our dataset(1/25) [Baidu Netdisk]() 
+Just download the dataset and replace the ./Data folder in our script.
+
+The model weights for image retrieval and matching are avaiable at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa). We also put them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r)
 
 <!-- Run Locally -->
 ### :running: Run the demo
