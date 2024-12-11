@@ -38,14 +38,14 @@ Maybe you can mention me or this repo in the acknowledgements too
   </a>-->
 </p> 
    
-<h4>
+<!--<h4>
     <a href="https://github.com/Louis3797/awesome-readme-template/">View Paper</a>
   <span> · </span>
     <a href="https://github.com/Louis3797/awesome-readme-template">Download Dataset</a>
   <span> · </span>
     <a href="https://github.com/Louis3797/awesome-readme-template/issues/">View demo</a>
 
-  </h4>
+  </h4>-->
 </div>
 
 <br />
@@ -89,17 +89,17 @@ Maybe you can mention me or this repo in the acknowledgements too
 ### 🗺️: Reference Maps
 
 <div align="center"> 
-  <img src="assets/reference_map1_new.png" alt="Reference Map Examples" />
+  <img src="assets/reference_map_new1.png" alt="Reference Map Examples" />
 </div>
 
 <!-- Dataset Features -->
 <a name="Dataset-Features"></a>
 ### 🌟: Dataset Features
-
-- **Multi-altitude:** Our dataset contains low-altitude flight conditions from 30m to 300m.
-- **Multi-view:**  Our dataset covers common used pitch angle of UAV imaging from 20° to 90°.
-- **Multi-scene:** Our dataset includes various scenes, such as dense urban areas (e.g., cities, towns, country), typical landmark scenes (e.g., playground, museums, church), natural scenes (e.g., farmland and mountains), and mixed scenes (e.g., universities and  park).
-- **Multi-reference map:** Our dataset provides two types of 2.5D reference maps for different purposes. The aerial map with high spatial resolution can be used for high-precision localization but needs pre-aerial photogrammetry. The satellite map serves as an alternative when the aerial map is unavailable.
+- **Large scale:** **18,000** full-resolution DJI images taken from **15** different cities across China. The reference maps cover **25** distinct regions ranging in coverage area from **10,000 $m^2$ to 9,000,000 $m^2$**.
+- **Multi-altitude:** The dataset contains low-altitude flight conditions from **30m to 300m**.
+- **Multi-view:**  The dataset covers common used pitch angle of UAV imaging from **20° to 90°**.
+- **Multi-scene:** The dataset includes various scenes, such as dense **urban** areas (e.g., cities, towns, country), typical **landmark** scenes (e.g., playground, museums, church), **natural** scenes (e.g., farmland and mountains), and **mixed** scenes (e.g., universities and  park).
+- **Multi-reference map:** The dataset provides two types of 2.5D reference maps for different purposes. The **aerial map** with high spatial resolution can be used for high-precision localization but needs pre-aerial photogrammetry. The **satellite map** serves as an alternative when the aerial map is unavailable.
 - **Multi-drone type:** Mavic 2, Mavic 3, Mavic 3 Pro, Phantom 3, Phantom 4, Phantom 4 RTK, Mini 4 Pro
 - **Others:** multiple weather(☀️⛅☁️🌫️🌧️), seasons(🌻🍀🍂⛄), illuminations(🌇🌆)
 
@@ -124,11 +124,11 @@ Install dependencies(tested on windows python 3.9)
 <!-- Download-->
 ### ⬇️: Download the dataset and the model weights
 
-Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) 
-Please download the dataset and replace the ./Data folder in the script.
+- Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) .
+Please download the dataset and replace the ```./Data``` folder in the script.
 
-The model weights for image retrieval and matching are avaiable at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa). We also put them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r)
-
+- The model weights for image retrieval and matching are available at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa). We also put them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r).
+<br>Please download the weights and put them into the ``` ./Retrieval_Models/CAMP/weights/xxx.pth``` and ```./Matching_Models/RoMa/ckpt/xxx.pth```, respectively.
 <!-- Run Locally -->
 ### :running: Run the demo
 
@@ -136,7 +136,7 @@ This baseline use the [CAMP](https://github.com/Mabel0403/CAMP) model for image-
 ```bash
   python baseline.py
 ```
-
+### :rocket: Test your own dataset
 if you want to test your own dataset, please following these steps:
 1. put your drone images in .\Data\UAV_image\your_test_region (the default image format is JPG, if you use other image format, please change the image read function.
 2. put your reference maps in .\Data\Reference_map\your_test_region (the 2d reference map and the corresponding dsm map are required, the default image format is TIF).
