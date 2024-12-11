@@ -124,8 +124,8 @@ Install dependencies(tested on windows python 3.9)
 <!-- Download-->
 ### ⬇️: Download the dataset and the model weights
 
-We put our dataset(1/25) [Baidu Netdisk]() 
-Just download the dataset and replace the ./Data folder in our script.
+Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) 
+Please download the dataset and replace the ./Data folder in the script.
 
 The model weights for image retrieval and matching are avaiable at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa). We also put them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r)
 
@@ -137,7 +137,10 @@ This baseline use the [CAMP](https://github.com/Mabel0403/CAMP) model for image-
   python baseline.py
 ```
 
-if you want to test your own dataset, please put your drone images in xxx
+if you want to test your own dataset, please following these steps:
+1. put your drone images in .\Data\UAV_image\your_test_region (the default image format is JPG, if you use other image format, please change the image read function.
+2. put your reference maps in .\Data\Reference_map\your_test_region (the 2d reference map and the corresponding dsm map are required, the default image format is TIF).
+3. add new configuration data in .\Data\metadata\your_test_region.json 
 
 ```bash
   cd my-project
