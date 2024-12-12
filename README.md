@@ -57,11 +57,13 @@ Maybe you can mention me or this repo in the acknowledgements too
   * [UAV Images Examples](#UAV-Images)
   * [Reference Map Examples](#Reference-Maps)
   * [Dataset Features](#Dataset-Features)
-- [The baseline demo](#baseline)
+- [The Baseline Demo](#baseline)
   * [Installation](#Installation)
   * [Download Files](#Download)
   * [Run the demo](#running)
-  * [Test your dataset](#test)
+  * [Test Your Dataset](#test_dataset)
+  * [Test Your Visual Localization Approaches](#test_approaches)
+
 
 <!-- Roadmap -->
 <a name="todo"></a>
@@ -105,7 +107,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 
 <!-- Running the baseline demo -->
 <a name="baseline"></a>
-## 	🚩: The baseline demo
+## 	🚩: The Baseline Demo
 
 <!-- Installation -->
 <a name="Installation"></a>
@@ -142,13 +144,13 @@ This baseline use the [CAMP](https://github.com/Mabel0403/CAMP) model for image-
 ```bash
   python baseline.py
 ```
-<a name="test"></a>
+<a name="test_dataset"></a>
 ### :rocket: Test your dataset
 If you want to test your own dataset, please follow these steps:
 
 1. **Prepare Drone Images**:
    - Place your drone images in the directory `.\Data\UAV_image\your_test_region`.
-   - The default image format is JPG. If you are using other format (e.g., PNG), make sure to adjust the image reading function accordingly.
+   - The default image format is JPG. If you use a different format (e.g., PNG), make sure to adjust the image reading function accordingly.
 
 2. **Prepare Reference Maps**:
    - Put your reference maps in the directory `.\Data\Reference_map\your_test_region`.
@@ -157,22 +159,31 @@ If you want to test your own dataset, please follow these steps:
 
 3. **Configure Metadata**:
    - Put your drone metadata in `.\Data\metadata\your_test_region.json`.
-   - Ensure that this JSON file includes all necessary metadata information (e.g., image path, drone 6 DoF pose and camera intrinsics).
+   - Ensure that this JSON file includes all necessary information (e.g., image path, drone 6 DoF pose and camera intrinsics).
+   - Put the reference map information of your test region in `.\Regions_params\your_test_region.yaml`.
+   - Ensure that this YAML file includes all necessary information (e.g., image path, spatial resolution, the WGS84 UTM system of test region and the initial coordinates of reference maps).
+   - Please note that the parameters named `xxx_REF_COORDINATE` and `xxx_DSM_COORDINATE`  are used to align the 2D reference map with the DSM map. You can use geographic information software such as [ENVI](https://www.nv5geospatialsoftware.com/Products/ENVI) to open both TIF images simultaneously and select the pixel coordinates of any corresponding points as inputs for these parameters.
 
-```bash
-  cd my-project
-```
-and put your reference maps in xxx, the dataset configuration files have to be modified too.
+<a name="test_approaches"></a>
+### 🔆: Test Your Visual Localization Approaches
+1. **Test Your Own Image Retrieval Model**
+  -**Place Your Folder:** Put your main folder at the  `./Retrieval_Models/your_approach`.
+  -**Modify Files:** Update the following files:
+    +`multi_model_loader.py`: Contains the function calls for image retrieval methods.
+    +`feature_extract.py`: Contains the functions for network feature processing.
+    +`config.yaml`: Add the name of your image retrieval method.
+  -**Suggestion:** Refer to the functions we have provided for corresponding modifications.
 
-```bash
-  yarn install
-```
+2. **Test Your Own Image Matching Model**
+-**Place Your Folder:** Put your main folder at the `./Matching_Models/your_approach`.
+-**Modify Files:** Update the following files:
++ Add a `xxx_match.py` File: Include the model initialization function `xxx_Init()` and the image matching function `xxx_match()`.
+Refer to our provided Roma_match.py for modifications.
++ Modify `utils.py`: Update the `matching_init()` function and the `Match2Pos_all()` function.
+Add the invocation module for your method within these functions.
++`config.yaml`: Add the name of your image matching method.
 
-Start the server
 
-```bash
-  yarn start
-```
 
 Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-template/blob/master/CODE_OF_CONDUCT.md)
 
