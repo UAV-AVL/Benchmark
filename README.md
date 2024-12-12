@@ -42,14 +42,18 @@ Maybe you can mention me or this repo in the acknowledgements too
   * [Run the demo](#running)
   * [Test Your Dataset](#test_dataset)
   * [Test Your Visual Localization Approaches](#test_approaches)
-
-
+- [FAQ](#FAQ)
+- [License](#License)
+- [Acknowledgments](#Acknowledgments)
+  
 <!-- Roadmap -->
 <a name="todo"></a>
 ## :compass: Todo List
 
 * [x] Release a demo of the best combined method (Baseline) to achieve UAV visual localization.
-* [ ] Release all the UAV visual localization approaches evaluated in the benchmark.  
+* [x] Release 1/25 of the dataset for demo testing. (The region is an old town in Qingzhou City，China)
+* [ ] Release all the UAV visual localization approaches evaluated in the benchmark.
+* [ ] Release the whole dataset evaluated in the benchmark.
 
 <!-- About the AnyVisLoc Dataset -->
 <a name="about-the-dataset"></a>
@@ -196,22 +200,24 @@ Add the invocation module for your method within these functions.
     + `config.yaml`: Add the name of your image matching method.
 
 <!-- FAQ -->
+<a name="FAQ"></a>
 ## :grey_question: FAQ
 
-- Question 1： Why do we need to perform image retrieval before image matching?
+- **Why do we need to perform image retrieval before image matching?**
 
- + Answer： In UAV visual localization tasks, the reference image scope is often much larger than the real-time images captured by the UAV. Directly applying pixel-level matching algorithms in such scenarios would lead to a massive search space and significant computational and storage pressures. Additionally, under low-altitude oblique observation conditions, image-level retrieval exhibits better robustness to viewpoint differences compared to pixel-level matching. Therefore, we recommend first using image-level retrieval (also known as visual geo-localization or visual place recognition) to find the approximate location of the UAV image, and then performing pixel-level matching.
+  + In UAV visual localization tasks, the reference map's coverage area is often much larger than the real-time images captured by the UAV. Directly applying pixel-level matching algorithms in such scenarios would lead to a massive search space and significant computational and storage pressures. Additionally, under low-altitude oblique observation conditions, image-level retrieval exhibits better robustness to viewpoint differences compared to pixel-level matching. Therefore, we recommend first using image-level retrieval (also known as visual geo-localization or visual place recognition) to find the approximate location of the UAV image, and then performing pixel-level matching.
     
-- Question 2: Why do we provide both aerial photogrammetry reference maps and satellite maps?
+- **Why do we provide both aerial photogrammetry reference maps and satellite maps?**
 
-  + Answer: These two types of reference maps have different advantages and disadvantages. Aerial maps offer superior localization accuracy but are more cumbersome to produce. They require pre-aerial photography and precise 3D modeling of the flight area, making them less suitable for time-sensitive missions (e.g., emergency rescue) or long-distance flight tasks. Therefore, the type of reference map should be chosen based on the actual mission requirements. Our dataset supports researchers in comprehensively evaluating their localization approaches with different reference maps.
+  + These two types of reference maps have different advantages and disadvantages. Aerial maps offer superior localization accuracy but are more cumbersome to produce. They require pre-aerial photography and precise 3D modeling of the flight area, making them less suitable for time-sensitive missions (e.g., emergency rescue) or long-distance flight tasks. Therefore, the type of reference map should be chosen based on the actual mission requirements. Our dataset supports researchers in comprehensively evaluating their localization approaches with different reference maps.
 
+<a name="License"></a>
 <!-- License -->
 ## :warning: License
 
-Distributed under the no License. See LICENSE.txt for more information.
+See LICENSE.txt for more information.
 
-
+<a name="Acknowledgments"></a>
 <!-- Acknowledgments -->
 ## :gem: Acknowledgements
 
