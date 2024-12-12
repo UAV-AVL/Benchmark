@@ -110,7 +110,7 @@ Install dependencies(tested on windows python 3.9)
   - Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) .
   - Please download the dataset and replace the `./Data` folder in the script.
   - Dataset are stored in the `./Data` folder like this:
-   ```
+```
   UAV_AVL_demo/Data/
   ├── metadata
   │   ├── test_region_name1.json
@@ -131,22 +131,22 @@ Install dependencies(tested on windows python 3.9)
     │   │   ├── DJI_0002.JPG
     │   │   ├── DJI_0003.JPG
     │   │   ├── ...
-    │   │   ├── region1_place2
+    │   ├── region1_place2
     │   │   ├── DJI_0001.JPG
     │   │   ├── DJI_0002.JPG
     │   │   ├── DJI_0003.JPG
     │   │   ├── ...
-    │   ├── test_region_name2
+    ├── test_region_name2
     │   ├──  ...
-    ```
----
-1. **Model Weights**
+```
+
+2. **Model Weights**
 - The model weights for image retrieval and matching are available at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa).
 - We have also uploaded them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r).
 - Please download the weights and place them in the following directories:
   + For CAMP: `./Retrieval_Models/CAMP/weights/xxx.pth`
   + For RoMa: `./Matching_Models/RoMa/ckpt/xxx.pth`
----
+
 
 <!-- Run Locally -->
 <a name="running"></a>
@@ -198,14 +198,13 @@ Add the invocation module for your method within these functions.
 <!-- FAQ -->
 ## :grey_question: FAQ
 
-- Question 1
+- Question 1： Why do we need to perform image retrieval before image matching?
 
-  + Answer 1
+ + Answer： In UAV visual localization tasks, the reference image scope is often much larger than the real-time images captured by the UAV. Directly applying pixel-level matching algorithms in such scenarios would lead to a massive search space and significant computational and storage pressures. Additionally, under low-altitude oblique observation conditions, image-level retrieval exhibits better robustness to viewpoint differences compared to pixel-level matching. Therefore, we recommend first using image-level retrieval (also known as visual geo-localization or visual place recognition) to find the approximate location of the UAV image, and then performing pixel-level matching.
+    
+- Question 2: Why do we provide both aerial photogrammetry reference maps and satellite maps?
 
-- Question 2
-
-  + Answer 2
-
+  + Answer: These two types of reference maps have different advantages and disadvantages. Aerial maps offer superior localization accuracy but are more cumbersome to produce. They require pre-aerial photography and precise 3D modeling of the flight area, making them less suitable for time-sensitive missions (e.g., emergency rescue) or long-distance flight tasks. Therefore, the type of reference map should be chosen based on the actual mission requirements. Our dataset supports researchers in comprehensively evaluating their localization approaches with different reference maps.
 
 <!-- License -->
 ## :warning: License
