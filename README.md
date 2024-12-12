@@ -182,6 +182,7 @@ If you want to test your own dataset, please follow these steps:
 
 <a name="test_approaches"></a>
 ### 🔆: Test Your Visual Localization Approaches
+If you want to test your visual localization approaches, please follow these steps:
 
 1. **Test Your Own Image Retrieval Model**:
   - **Place Your Folder:** Put your main folder at the  `./Retrieval_Models/your_approach`.
