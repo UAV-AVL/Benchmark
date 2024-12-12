@@ -112,7 +112,7 @@ Install dependencies(tested on windows python 3.9)
 ### ⬇️: Download Files
 1. **Dataset**
   - Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) .
-  - Please download the dataset and replace the `./Data` folder in the script.
+  - Please download the dataset and place it in the `./UAV_AVL_demo/Data`
   - Dataset are stored in the `./Data` folder like this:
 ```
   UAV_AVL_demo/Data/
