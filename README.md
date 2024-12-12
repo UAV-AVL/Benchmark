@@ -15,28 +15,7 @@ Maybe you can mention me or this repo in the acknowledgements too
     This benchmark focuses on UAV visual localization under Low-altitude Multi-view observation condition using the 2.5D aerial or satellite reference maps. The visual localization is mainly achieved via a unified framework combining image retrieval, image matching, and PnP problem solving. 
   </p>
   
-  
-<!-- Badges
-<p>
-  <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Louis3797/awesome-readme-template" alt="contributors" />
-  </a>
-  <a href="">
-    <img src="https://img.shields.io/github/last-commit/Louis3797/awesome-readme-template" alt="last update" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/network/members">
-    <img src="https://img.shields.io/github/forks/Louis3797/awesome-readme-template" alt="forks" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/stargazers">
-    <img src="https://img.shields.io/github/stars/Louis3797/awesome-readme-template" alt="stars" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/issues/">
-    <img src="https://img.shields.io/github/issues/Louis3797/awesome-readme-template" alt="open issues" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/Louis3797/awesome-readme-template.svg" alt="license" />
-  </a>-->
-</p> 
+
    
 <!--<h4>
     <a href="https://github.com/Louis3797/awesome-readme-template/">View Paper</a>
@@ -130,12 +109,45 @@ Install dependencies(tested on windows python 3.9)
 1. **Dataset**
   - Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) .
   - Please download the dataset and replace the `./Data` folder in the script.
+  - Dataset are stored in the `./Data` folder like this:
+   ```
+  UAV_AVL_demo/Data/
+  ├── metadata
+  │   ├── test_region_name1.json
+  │   ├── test_region_name2.json
+  │   ├── ...
+  ├── Reference_map
+  │   ├── test_region_name1
+  │   │   ├── aerial_2D_reference_map.tif
+  │   │   ├── aerial_DSM_reference_map.tif
+  │   │   ├── satellite_2D_reference_map.tif
+  │   │   ├── satellite_DSM_reference_map.tif
+  │   ├── test_region_name2
+  │   ├──  ...
+  └── UAV_image
+    ├── test_region_name1
+    │   ├── region1_place1
+    │   │   ├── DJI_0001.JPG
+    │   │   ├── DJI_0002.JPG
+    │   │   ├── DJI_0003.JPG
+    │   │   ├── ...
+    │   │   ├── region1_place2
+    │   │   ├── DJI_0001.JPG
+    │   │   ├── DJI_0002.JPG
+    │   │   ├── DJI_0003.JPG
+    │   │   ├── ...
+    │   ├── test_region_name2
+    │   ├──  ...
+    ```
+---
 1. **Model Weights**
 - The model weights for image retrieval and matching are available at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa).
 - We have also uploaded them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r).
 - Please download the weights and place them in the following directories:
   + For CAMP: `./Retrieval_Models/CAMP/weights/xxx.pth`
   + For RoMa: `./Matching_Models/RoMa/ckpt/xxx.pth`
+---
+
 <!-- Run Locally -->
 <a name="running"></a>
 ### :running: Run the demo
@@ -166,26 +178,22 @@ If you want to test your own dataset, please follow these steps:
 
 <a name="test_approaches"></a>
 ### 🔆: Test Your Visual Localization Approaches
-1. **Test Your Own Image Retrieval Model**
-  -**Place Your Folder:** Put your main folder at the  `./Retrieval_Models/your_approach`.
-  -**Modify Files:** Update the following files:
-    +`multi_model_loader.py`: Contains the function calls for image retrieval methods.
-    +`feature_extract.py`: Contains the functions for network feature processing.
-    +`config.yaml`: Add the name of your image retrieval method.
-  -**Suggestion:** Refer to the functions we have provided for corresponding modifications.
 
-2. **Test Your Own Image Matching Model**
--**Place Your Folder:** Put your main folder at the `./Matching_Models/your_approach`.
--**Modify Files:** Update the following files:
-+ Add a `xxx_match.py` File: Include the model initialization function `xxx_Init()` and the image matching function `xxx_match()`.
+1. **Test Your Own Image Retrieval Model**:
+  - **Place Your Folder:** Put your main folder at the  `./Retrieval_Models/your_approach`.
+  - **Modify Files:** Update the following files:
+    + `multi_model_loader.py`: Contains the function calls for image retrieval methods.
+    + `feature_extract.py`: Contains the functions for network feature processing.
+    + `config.yaml`: Add the name of your image retrieval method.
+  - **Suggestion:** Refer to the functions we have provided for corresponding modifications.
+2. **Test Your Own Image Matching Model**:
+  - **Place Your Folder:** Put your main folder at the `./Matching_Models/your_approach`.
+  - **Modify Files:** Update the following files:
+    + Add a `xxx_match.py` File: Include the model initialization function `xxx_Init()` and the image matching function `xxx_match()`.
 Refer to our provided Roma_match.py for modifications.
-+ Modify `utils.py`: Update the `matching_init()` function and the `Match2Pos_all()` function.
+    + Modify `utils.py`: Update the `matching_init()` function and the `Match2Pos_all()` function.
 Add the invocation module for your method within these functions.
-+`config.yaml`: Add the name of your image matching method.
-
-
-
-Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-template/blob/master/CODE_OF_CONDUCT.md)
+    + `config.yaml`: Add the name of your image matching method.
 
 <!-- FAQ -->
 ## :grey_question: FAQ
