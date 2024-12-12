@@ -58,11 +58,10 @@ Maybe you can mention me or this repo in the acknowledgements too
   * [Reference Map Examples](#Reference-Maps)
   * [Dataset Features](#Dataset-Features)
 - [The baseline demo](#baseline)
-  * [Prerequisites](#bangbang-prerequisites)
   * [Installation](#Installation)
-  * [Download the dataset and the model weights](#Download)
-  * [Run Locally](#running-run-locally)
-  * [Deployment](#triangular_flag_on_post-deployment)
+  * [Download Files](#Download)
+  * [Run the demo](#running)
+  * [Test your dataset](#test)
 
 <!-- Roadmap -->
 <a name="todo"></a>
@@ -125,7 +124,7 @@ Install dependencies(tested on windows python 3.9)
    
 <!-- Download-->
 <a name="Download"></a>
-### ⬇️: Download the dataset and the model weights
+### ⬇️: Download Files
 1. **Dataset**
   - Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) .
   - Please download the dataset and replace the `./Data` folder in the script.
@@ -136,13 +135,15 @@ Install dependencies(tested on windows python 3.9)
   + For CAMP: `./Retrieval_Models/CAMP/weights/xxx.pth`
   + For RoMa: `./Matching_Models/RoMa/ckpt/xxx.pth`
 <!-- Run Locally -->
+<a name="running"></a>
 ### :running: Run the demo
 
 This baseline use the [CAMP](https://github.com/Mabel0403/CAMP) model for image-level retrieval and the [Roma](https://github.com/Parskatt/RoMa) model for pixel-level matching, just run
 ```bash
   python baseline.py
 ```
-### :rocket: Test your own dataset
+<a name="test"></a>
+### :rocket: Test your dataset
 If you want to test your own dataset, please follow these steps:
 
 1. **Prepare Drone Images**:
@@ -156,7 +157,7 @@ If you want to test your own dataset, please follow these steps:
 
 3. **Configure Metadata**:
    - Put your drone metadata in `.\Data\metadata\your_test_region.json`.
-   - Ensure that this JSON file includes all necessary metadata information, including the image path, drone 6 DoF pose(ground truth) and camera intrinsics.
+   - Ensure that this JSON file includes all necessary metadata information (e.g., image path, drone 6 DoF pose and camera intrinsics).
 
 ```bash
   cd my-project
