@@ -158,27 +158,28 @@ def Match2Pos_all(opt, region, config, uav_img0, finescale, K, ref_image, dsm_im
 
         if len(Ref_pts)>=5:
             refCoordinate = np.array(Ref_pts)/resize_ratio*finescale + np.array([refLocY, refLocX])
+
+            if opt.pose_priori == 'yp':
+                refCoordinate1 = np.hstack([refCoordinate, np.ones((refCoordinate.shape[0], 1))])
+                refCoordinate = refCoordinate1 @ reverseMatRotation.T
+                UTM_X = refCoordinate[:, 0] * ref_resolution + initialX
+                UTM_Y = initialY - refCoordinate[:, 1] * ref_resolution
+            else:
+                UTM_X = refCoordinate[:, 0] * ref_resolution + initialX
+                UTM_Y = initialY - refCoordinate[:, 1] * ref_resolution
+
             dsm_x = refCoordinate[:, 1] + dsm_offset[1]
             dsm_y = refCoordinate[:, 0] + dsm_offset[0]
-            dsm_x, dsm_y = (dsm_x+1)/dsm_ratio-1, (dsm_y+1)/dsm_ratio-1
+            dsm_x, dsm_y = (dsm_x + 1) / dsm_ratio - 1, (dsm_y + 1) / dsm_ratio - 1
             dsm_x1 = dsm_x.astype(int)
             for ii in range(len(dsm_x1)):
                 if dsm_x1[ii] >= dsm_image.shape[0]:
-                    dsm_x1[ii] = dsm_image.shape[0]-1
+                    dsm_x1[ii] = dsm_image.shape[0] - 1
             dsm_y1 = dsm_y.astype(int)
             for jj in range(len(dsm_y1)):
                 if dsm_y1[jj] >= dsm_image.shape[1]:
                     dsm_y1[jj] = dsm_image.shape[1] - 1
             DSM = dsm_image[dsm_x1, dsm_y1]
-
-            if opt.pose_priori == 'yp':
-                refCoordinate1 = np.hstack([refCoordinate, np.ones((refCoordinate.shape[0], 1))])
-                refCoordinate2 = refCoordinate1 @ reverseMatRotation.T
-                UTM_X = refCoordinate2[:, 0] * ref_resolution + initialX
-                UTM_Y = initialY - refCoordinate2[:, 1] * ref_resolution
-            else:
-                UTM_X = refCoordinate[:, 0] * ref_resolution + initialX
-                UTM_Y = initialY - refCoordinate[:, 1] * ref_resolution
 
             match_points = np.array(Sen_pts)/resize_ratio
             BLH, _, inliers, inliers_all = estimate_drone_pose(region, config, match_points, K, UTM_X, UTM_Y,  DSM)
