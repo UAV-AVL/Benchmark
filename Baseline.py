@@ -75,14 +75,14 @@ if __name__ == '__main__':
 
                     # Rotate the reference map to align with the UAV image by utilizing the prior yaw angle.
                     ref_map, matRotation = dumpRotateImage(ref_map0, truePos['yaw'])
-                    dsm_map, _ = dumpRotateImage(dsm_map0, truePos['yaw'])
+
                     VG_time0 = time.time()
 
                     # Visual Localization Step1: Image-level Retrieval
                     IR_order, refLocX, refLocY, PDE_list, cut_H, cut_W, fineScale, retrieval_time = retrieval_all(ref_map, uav_path, truePos,  ref_resolution,  matRotation, save_path, opt, region, region_config, method_dict)
 
                     # Visual Localization Step2&3: Pixel-level Matching & PnP Problem Solving
-                    BLH_list, inliners_list, match_time, pnp_time = Match2Pos_all(opt, region, region_config, uav_image, fineScale, K, ref_map, dsm_map, refLocY, refLocX, cut_H, cut_W,
+                    BLH_list, inliners_list, match_time, pnp_time = Match2Pos_all(opt, region, region_config, uav_image, fineScale, K, ref_map, dsm_map0, refLocY, refLocX, cut_H, cut_W,
                                                                                 save_path, method_dict, matRotation)
                     # Calculate the visual localization error
                     pred_loc, pred_error, location_error_list = pos2error(truePos, BLH_list, inliners_list)
