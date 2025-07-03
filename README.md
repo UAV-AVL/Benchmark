@@ -214,6 +214,17 @@ Add the invocation module for your method within these functions.
 
   + These two types of reference maps have different advantages and disadvantages. Aerial maps offer superior localization accuracy but are more cumbersome to produce. They require pre-aerial photography and precise 3D modeling of the flight area, making them less suitable for time-sensitive missions (e.g., emergency rescue) or long-distance flight tasks. Therefore, the type of reference map should be chosen based on the actual mission requirements. Our dataset supports researchers in comprehensively evaluating their localization approaches with different reference maps.
 
+## Citation
+
+If you find this research useful, please cite our paper. Thank you!
+```
+@article{ye2025exploring,
+  title={Exploring the best way for UAV visual localization under Low-altitude Multi-view Observation Condition: a Benchmark},
+  author={Ye, Yibin and Teng, Xichao and Chen, Shuo and Li, Zhang and Liu, Leqi and Yu, Qifeng and Tan, Tao},
+  journal={arXiv preprint arXiv:2503.10692},
+  year={2025}
+}
+```
 <a name="License"></a>
 <!-- License -->
 ## :warning: License
