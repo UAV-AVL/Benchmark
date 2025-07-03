@@ -113,7 +113,7 @@ Install dependencies(tested on windows python 3.9)
 <a name="Download"></a>
 ### ⬇️: Download Files
 1. **Dataset**
-  - Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) .
+  - Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) and [Google Drive](https://drive.google.com/file/d/1GmBOD_5tB9GyHdLmDlXY6--RAsCJbLQf/view) 
   - Please download the dataset and place it in the `./UAV_AVL_demo/Data`
   - Dataset are stored in the `./Data` folder like this:
 ```
@@ -147,8 +147,8 @@ Install dependencies(tested on windows python 3.9)
 ```
 
 2. **Model Weights**
-- The model weights for image retrieval and matching are available at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa).
-- We have also uploaded them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r).
+- The model weights for image retrieval and matching are available at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa) 
+- We have also uploaded them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r) and [Google Drive](https://drive.google.com/file/d/1GmBOD_5tB9GyHdLmDlXY6--RAsCJbLQf/view) 
 - Please download the weights and place them in the following directories:
   + For CAMP: `./Retrieval_Models/CAMP/weights/xxx.pth`
   + For RoMa: `./Matching_Models/RoMa/ckpt/xxx.pth`
