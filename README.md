@@ -14,8 +14,9 @@ Maybe you can mention me or this repo in the acknowledgements too
   <p>
     This benchmark focuses on UAV visual localization under Low-altitude Multi-view observation condition using the 2.5D aerial or satellite reference maps. The visual localization is mainly achieved via a unified framework combining image retrieval, image matching, and PnP problem solving. 
 
-    
   </p>
+[Paper](https://arxiv.org/pdf/2503.10692) 
+    
 <p>  
    If you find our work useful, please consider giving us a ⭐️. Your support means a lot to us! 🥰
  </p>   
