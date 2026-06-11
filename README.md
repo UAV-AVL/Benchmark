@@ -12,11 +12,17 @@ Maybe you can mention me or this repo in the acknowledgements too
   <h1>The First Large-scale Benchmark for UAV Visual Localization under Low-altitude Multi-view Observation Condition</h1>
   
   <p>
-    This benchmark focuses on UAV visual localization under Low-altitude Multi-view observation condition using the 2.5D aerial or satellite reference maps. The visual localization is mainly achieved via a unified framework combining image retrieval, image matching, and PnP problem solving. 
+    This benchmark focuses on UAV visual localization under Low-altitude Multi-view observation condition using the 2.5D aerial or satellite reference maps. The visual localization is mainly achieved via a unified framework combining image retrieval, image matching, and PnP problem solving. [Paper](https://arxiv.org/pdf/2503.10692) 
 
   </p>
-[Paper](https://arxiv.org/pdf/2503.10692) 
-    
+
+
+<p>
+  🎉🎉🎉 <strong>News:</strong> Our paper has been accepted to <strong>CVPR 2026 Findings</strong>!🎉🎉🎉
+  <strong>The complete AnyVisLoc dataset is currently being prepared and will be released soon.</strong>
+  Thank you for your attention and support!
+</p>
+
 <p>  
    If you find our work useful, please consider giving us a ⭐️. Your support means a lot to us! 🥰
  </p>   
