@@ -14,15 +14,16 @@
 <p>
   If you find our work useful, please consider giving us a ⭐️. Your support means a lot to us! 🥰🥰🥰
 </p>
-<!--<h4>
-    <a href="https://openaccess.thecvf.com/content/CVPR2026F/papers/Ye_Exploring_the_best_way_for_UAV_visual_localization_under_Low-altitude_CVPRF_2026_paper.pdf">View Paper</a>
+<h4>
+  <a href="https://openaccess.thecvf.com/content/CVPR2026F/papers/Ye_Exploring_the_best_way_for_UAV_visual_localization_under_Low-altitude_CVPRF_2026_paper.pdf">
+    View Paper
+  </a>
   <span> · </span>
-    <a href="https://xxx">Download Dataset (Baidu NetDisk)</a> (extraction code: `fcw8`)
-
+  <a href="xxx">
+    Download Dataset (Baidu NetDisk)
+  </a>
   <span> · </span>
-
-  </h4>-->
-</div>
+</h4>
 
 <br />
 
