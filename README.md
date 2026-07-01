@@ -5,7 +5,6 @@
   <p>
     AnyVisLoc is a benchmark for UAV visual localization under low-altitude, multi-view observation conditions. It uses 2.5D aerial and satellite reference maps, and its baseline follows a unified image retrieval → image matching → Perspective-n-Point (PnP) localization framework.
   </p>
-
 <p>
   🎉🎉🎉 <strong>News:</strong> Our paper has been accepted to <strong>CVPR 2026 Findings</strong>! 🎉🎉🎉
   <strong>The complete AnyVisLoc dataset is now publicly available, and the testing code has been upgraded to support the NPZ-based data format.</strong>
@@ -23,7 +22,11 @@
     Download Dataset (Baidu NetDisk)
   </a>
   <span> · </span>
+
+Other download options will be available within one week.
+
 </h4>
+
 </div>
 
 <br />
