@@ -5,16 +5,15 @@ import numpy as np
 from Matching_Models.RoMa.roma import roma_outdoor
 from skimage.measure import ransac
 from skimage.transform import ProjectiveTransform
-
+from pathlib import Path
 
 def Roma_Init():
     # Create model
     device = 'cuda'
-    root_path = './Matching_Models/RoMa/'
-    model_path = root_path + "ckpt/roma_outdoor.pth"
-    dinov2_path = root_path + 'ckpt/dinov2_vitl14_pretrain.pth'
+    root_path = Path(__file__).resolve().parent.parent / "ckpt"
+    model_path = root_path / "roma_outdoor.pth"
+    dinov2_path = root_path / 'dinov2_vitl14_pretrain.pth'
     roma_model = roma_outdoor(device=device, weights=model_path, dinov2_weights=dinov2_path)
-    # roma_model = roma_outdoor(device=device, coarse_res=560, upsample_res=(864, 1152))
 
     return roma_model
 
@@ -45,13 +44,7 @@ def Roma_match(image0, image1, roma_model, save_path, ransac_name, need_ransac ,
             ProjectiveTransform, min_samples=4,
             residual_threshold=4, max_trials=10000
         )
-    # if len(mkpts0)>8:
-    #     np.random.seed(0)
-    #     _, inliers = ransac(
-    #         (mkpts0, mkpts1),
-    #         FundamentalMatrixTransform, min_samples=8,
-    #         residual_threshold=4, max_trials=10000
-    #     )
+
         n_inliers1 = np.sum(inliers)
         inlier_keys_left = [[point[0], point[1]] for point in mkpts0[inliers]]
         inlier_keys_right = [[point[0], point[1]] for point in mkpts1[inliers]]

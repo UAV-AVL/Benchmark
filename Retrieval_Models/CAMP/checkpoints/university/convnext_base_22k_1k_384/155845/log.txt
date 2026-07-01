@@ -1,2 +1,0 @@
-===========building convnext===========
-using model_type: convnext_base as a backbone

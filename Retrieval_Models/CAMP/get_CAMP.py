@@ -2,16 +2,14 @@ import os
 import torch
 import argparse
 from dataclasses import dataclass
-from Retrieval_Models.CAMP.sample4geo.model import TimmModel
-
-
+CAMP_DIR = os.path.dirname(os.path.abspath(__file__))
 @dataclass
 class Configuration:
     def __init__(self):
         parser = argparse.ArgumentParser(description='Train and Test on University-1652')
 
         parser.add_argument('--ckpt_path',
-                            default=r'Retrieval_Models/CAMP/weights/weights_0.9446_for_U1652.pth',
+                            default=rf'{CAMP_DIR}/weights/weights_0.9446_for_U1652.pth',
                             type=str, help='path to pretrained checkpoint file')
 
         # Added for your modification
@@ -139,17 +137,9 @@ class Configuration:
 def get_CAMP_model():
     config = Configuration()
 
-    if config.handcraft_model is not True:
-        # print("\nModel: {}".format(config.model))
-        model = TimmModel(config.model,
-                          pretrained=True, )
+    from .hand_convnext.model import make_model
 
-    else:
-        from Retrieval_Models.CAMP.sample4geo.hand_convnext.model import make_model
-
-        model = make_model(config)
-
-
+    model = make_model(config)
 
     # Activate gradient checkpointing
     if config.grad_checkpointing:
@@ -161,15 +151,14 @@ def get_CAMP_model():
         model.load_state_dict(model_state_dict, strict=True)
 
         # Data parallel
-    if torch.cuda.device_count() > 1 and len(config.gpu_ids) > 1:
-        model = torch.nn.DataParallel(model, device_ids=config.gpu_ids)
+    # Inference/demo: force single GPU, avoid NCCL/DataParallel
+    # if torch.cuda.device_count() > 1 and len(config.gpu_ids) > 1:
+    #     model = torch.nn.DataParallel(model, device_ids=config.gpu_ids)
 
     # Model to device
     model = model.to(config.device)
 
-    best_score = 0
-
-    checkpoint = torch.load(config.ckpt_path)
+    checkpoint = torch.load(config.ckpt_path, map_location=config.device)
 
     if 1:
         del checkpoint['model_1.classifier1.classifier.0.weight']

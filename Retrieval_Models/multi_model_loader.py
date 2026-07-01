@@ -1,5 +1,5 @@
 
-from Retrieval_Models.CAMP.get_CAMP import get_CAMP_model
+from .CAMP.get_CAMP import get_CAMP_model
 from torchvision import transforms
 
 ###################################################################################################################
