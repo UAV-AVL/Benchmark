@@ -7,7 +7,7 @@
   </p>
 <p>
   🎉🎉🎉 <strong>News:</strong> Our paper has been accepted to <strong>CVPR 2026 Findings</strong>! 🎉🎉🎉
-  <strong>The complete AnyVisLoc dataset is now publicly available, and the testing code has been upgraded to support the NPZ-based data format.</strong>
+  <strong>The complete AnyVisLoc dataset is now publicly available, and the testing code has been upgraded.</strong>
   Thank you for your attention and support!
 </p>
 <p>
@@ -21,9 +21,10 @@
   <a href="https://pan.baidu.com/s/14vSQDydkmiTj2U1JpQH-Hg?pwd=fcw8">
     Download Dataset (Baidu NetDisk)
   </a>
+  <a href="https://1drv.ms/f/c/fef40436afe2e5bb/IgC0Zat90dsgTY-2lNlDliGXAfuTZOYEeKcllr7VPD_F3eY?e=LJ5fAD">
+    (Onedrive)
+  </a>
   <span> · </span>
-
-Other download options will be available within one week.
 
 </h4>
 
