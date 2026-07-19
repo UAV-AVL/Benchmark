@@ -16,7 +16,11 @@
 <h4>
   <a href="https://openaccess.thecvf.com/content/CVPR2026F/papers/Ye_Exploring_the_best_way_for_UAV_visual_localization_under_Low-altitude_CVPRF_2026_paper.pdf">
     View Paper
-  </a>
+  </a> 
+  <span> · </span>
+  <a href="https://openaccess.thecvf.com/content/CVPR2026F/supplemental/Ye_Exploring_the_best_CVPRF_2026_supplemental.pdf">
+    Supplementary Material
+  </a> 
   <span> · </span>
   <a href="https://pan.baidu.com/s/14vSQDydkmiTj2U1JpQH-Hg?pwd=fcw8">
     Download Dataset (Baidu NetDisk)
@@ -184,7 +188,7 @@ The complete AnyVisLoc dataset is publicly available through the official downlo
 
 #### 2. Model Weights
 
-The default baseline configuration uses **CAMP** for image retrieval and supports **RoMa** and selectable sparse matchers for pixel-level matching. Required checkpoints can be downloaded from the original projects: [CAMP](https://drive.google.com/file/d/1qHjXr3VVQuJZ5kE5u7YrUB8id90Nv2GJ/view?usp=sharing), [RoMa](https://github.com/Parskatt/storage/releases/download/roma/roma_outdoor.pth), [DINOv2 ViT-L/14 (used by RoMa)](https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_pretrain.pth), [GIM LightGlue](https://github.com/xuelunshen/gim/raw/refs/heads/main/weights/gim_lightglue_100h.ckpt), and [MINIMA LightGlue](https://github.com/LSXI7/storage/releases/download/MINIMA/minima_lightglue.pth). Alternatively, all required checkpoints can be downloaded from our [Baidu NetDisk link](https://pan.baidu.com/s/15h9puhU7Xvokp7cuRf50ZA) (extraction code: `zyp9`).
+The default baseline configuration uses **CAMP** for image retrieval and supports **RoMa** and selectable sparse matchers for pixel-level matching. Required checkpoints can be downloaded from the original projects: [CAMP](https://drive.google.com/file/d/1qHjXr3VVQuJZ5kE5u7YrUB8id90Nv2GJ/view?usp=sharing), [RoMa](https://github.com/Parskatt/storage/releases/download/roma/roma_outdoor.pth), [DINOv2 ViT-L/14 (used by RoMa)](https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_pretrain.pth), [GIM LightGlue](https://github.com/xuelunshen/gim/raw/refs/heads/main/weights/gim_lightglue_100h.ckpt), and [MINIMA LightGlue](https://github.com/LSXI7/storage/releases/download/MINIMA/minima_lightglue.pth). Alternatively, all required checkpoints can be downloaded from our [Baidu NetDisk link](https://pan.baidu.com/s/15h9puhU7Xvokp7cuRf50ZA) (extraction code: `zpy9`).
 
 Please keep the original filenames and place the checkpoints in the expected folders:
 
