@@ -79,5 +79,5 @@ Because the original UAV images do not share a consistent elevation reference, a
 </p>
 
 <p align="justify">
-Overall, we have corrected the main avoidable sources of relative pose and reference-map misalignment through <strong>SfM-based aerial reconstruction, manual PnP verification, and satellite-to-aerial control-point warping</strong>. The remaining imperfections do exist, but they also reflect practical engineering problems that need to be addressed, such as how to achieve robust UAV localization when reference maps contain local distortions or other unavoidable artefacts. These issues provide meaningful directions for future research. Researchers interested in further improving the ground truth are welcome to contact us.
+Overall, we have corrected the main avoidable sources of relative pose and reference-map misalignment through <strong>SfM-based aerial reconstruction, manual PnP verification, and satellite-to-aerial control-point warping</strong>. The remaining imperfections do exist, but they also reflect practical engineering problems that need to be addressed, such as how to achieve robust UAV localization when reference maps contain local distortions or other unavoidable artifacts. These issues provide meaningful directions for future research. Researchers interested in further improving the ground truth are welcome to contact us.
 </p>
