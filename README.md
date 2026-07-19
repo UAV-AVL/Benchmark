@@ -86,7 +86,7 @@
 <!-- Dataset Features -->
 <a name="Dataset-Features"></a>
 ### 🌟 Dataset Features
-- **Large scale:** **20,077** full-resolution DJI UAV images from **24** scenes across China. The reference maps cover distinct regions ranging in coverage area from **10,000 $m^2$ to 9,000,000 $m^2$**.
+- **Large scale:** **20,077** DJI UAV images from **24** scenes across China. The reference maps cover distinct regions ranging in coverage area from **10,000 $m^2$ to 9,000,000 $m^2$**.
 - **Multi-altitude:** The dataset contains diverse UAV flight heights, ranging approximately from **6 m to 500 m**.
 - **Multi-view:** The dataset covers common UAV imaging pitch angles from approximately **5° to 90°**, including both nadir and oblique views.
 - **Multi-scene:** The dataset includes dense **urban** areas, towns and villages, typical **landmark** scenes, campuses, parks, **natural** scenes such as grasslands, farmland, and mountains, as well as mixed environments.
