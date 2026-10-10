@@ -29,6 +29,7 @@ def extract_features(retrieval_size, config, method_dict, MID, block_size, SATEL
             mid_x, mid_y = mids[item, :]
             img = cv2.resize(SATELLITE[int(mid_x - block_size[0] / 2):int(mid_x + block_size[0] / 2),
                   int(mid_y - block_size[1] / 2):int(mid_y + block_size[1] / 2)], (retrieval_size,retrieval_size))
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             img = Image.fromarray(img)
             img = val_transforms(img)
             batch_images.append(img)
